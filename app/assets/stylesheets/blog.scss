@@ -1,0 +1,111 @@
+// Place all the styles related to the blog controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+// img hover styles
+.blog_image {
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.blog_title_wrapper {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.grid-item:hover .blog_img {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.grid-item:hover .blog_title_wrapper {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.blog_title_text {
+  background-color: #4CAF50;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+
+
+
+
+// Masonry styles
+
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  width: 95%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+
+
+// phone
+@media screen and (max-width: 767px){
+    .grid-sizer,
+    .grid-item {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+}
+
+// tablet
+@media screen and (min-width: 768px){
+    .grid-sizer,
+    .grid-item {
+      width: 50%;
+    }
+}
+
+// laptop
+@media screen and (min-width: 992px){
+    .grid-sizer,
+    .grid-item {
+      width: 33.333%;
+    }
+}
+
+// desktop
+@media screen and (min-width: 1200px){
+}

@@ -1,0 +1,70 @@
+<head>
+
+    <title>Blog</title>
+
+    <!-- page specific javascript -->
+    <script type="text/javascript" src="/javascripts/blog_script.js"></script>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- home page link and brand name -->
+        <a class="navbar-brand" href="/">PACKBUILDER</a>
+
+        <!-- toggler for 'collapsed mode' -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- all links inside this div are added to the toggle list in collapsed mode -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- page links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="/loadout">Loadout</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            </ul>
+
+
+            <!-- social links -->
+            <ul class="nav navbar-nav navbar-right social_links">
+                <li><a href="www.facebook.com" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+                <li><a href="www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="www.youtube.com"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- page header, this will be the packbuilder logo eventually! and page title probably -->
+    <div class="jumbotron">
+        <h2 class="display">Blogs</h2>
+    </div>
+
+    <!-- populate blogs in image grid -->
+    <div class="grid">
+        <div class="grid-sizer"></div>
+        <% if @blogs %>
+            <% @blogs.each do |blog| %>
+                <div class="grid-item">
+                    <a href="/blog/<%= blog['id'] %>">
+                        <img class="blog_img" src="<%= blog['main_image'] %>">
+                        <div class="blog_title_wrapper">
+                            <div class="blog_title_text"><%= blog['title'] %></div>
+                        </div>
+                    </a>
+                </div>
+            <% end %>
+            <% else %>
+                <h3>Error Loading Blogs! Please Retry.</h3>
+            <% end %>
+        </div>
+    </div>
+
+
+</body>

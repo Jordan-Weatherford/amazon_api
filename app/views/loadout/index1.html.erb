@@ -1,0 +1,100 @@
+<head>
+    <title>Packbuilder</title>
+
+    <!-- page specific javascript -->
+    <script type="text/javascript" src="/javascripts/loadout_script.js"></script>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- home page link and brand name -->
+        <a class="navbar-brand" href="/">PACKBUILDER</a>
+
+        <!-- toggler for 'collapsed mode' -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- all links inside this div are added to the toggle list in collapsed mode -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- page links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/loadout">Packbuilder</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog">DIY</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            </ul>
+
+
+            <!-- social links -->
+            <ul class="nav navbar-nav navbar-right social_links">
+                <li><a href="www.facebook.com"><i class="fa fa-facebook-official"></i></a></li>
+                <li><a href="www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="www.youtube.com"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- page header, this will be the packbuilder logo eventually! and page title probably -->
+    <div class="jumbotron">
+        <h2 class="display">Loadout Tool!</h2>
+        <em>need instructions ?</em>
+    </div>
+
+    <!-- item browser -->
+    <div class="container-fluid">
+
+        <!-- item carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color: lightblue;">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            </ol>
+
+
+            <!-- item slide -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row" style="height: 400px;">
+                        <!-- catagories -->
+                        <div class="col-md-2" style='background-color: green; '>
+
+                        </div>
+
+                        <!-- images -->
+                        <div class="col-md-5" style='background-color: blue;'>
+                            <div class="row">
+                                <div class="col-sm-2" style="background-color: black;">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- stats -->
+                        <div class="col-md-5" style="background-color: yellow; height: 95%;">
+
+                        </div>
+                    </div>
+                </div>
+            </div><!-- item slide -->
+
+
+
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div><!-- carousel slide -->
+
+    </div>
+</body>

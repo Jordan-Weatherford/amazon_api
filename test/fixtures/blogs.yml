@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  index: 1
+  date: MyString
+  coord_x: 1.5
+  coord_y: 1.5
+
+two:
+  title: MyString
+  index: 1
+  date: MyString
+  coord_x: 1.5
+  coord_y: 1.5

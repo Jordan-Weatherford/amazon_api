@@ -1,0 +1,107 @@
+<head>
+    <title>Packbuilder</title>
+
+    <!-- page specific javascript -->
+    <script type="text/javascript" src="/javascripts/loadout_script.js"></script>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- home page link and brand name -->
+        <a class="navbar-brand" href="/">PACKBUILDER</a>
+
+        <!-- toggler for 'collapsed mode' -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- all links inside this div are added to the toggle list in collapsed mode -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- page links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/loadout">Packbuilder</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog">DIY</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            </ul>
+
+
+            <!-- social links -->
+            <ul class="nav navbar-nav navbar-right social_links">
+                <li><a href="www.facebook.com"><i class="fa fa-facebook-official"></i></a></li>
+                <li><a href="www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="www.youtube.com"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- page header, this will be the packbuilder logo eventually! and page title probably -->
+    <div class="jumbotron">
+        <h2 class="display">Loadout Tool!</h2>
+        <em>need instructions ?</em>
+    </div>
+
+    <div class="container">
+        <div class="equipment_selector">
+            <div id="catagory_wrapper" data-step="1"></div>
+
+            <!-- item slide -->
+            <div class="slide_wrapper">
+                <div class="item_header_wrapper">
+                    <a href="#" target="_blank" class="item_view_link"><h1 id="item_header"></h1></a>
+                </div>
+
+                <div class="arrow left" name='left' data-step="2"><span><</span></div>
+
+                <div class="images_wrapper">
+                    <div class="large_image_wrapper">
+                        <a class="item_view_link" href="#" target="_blank"><img id="main_image" src="#" alt="big image"></a>
+                    </div>
+
+                    <div id="thumbnails_wrapper"></div>
+                </div>
+
+                <div class="item_stats_wrapper">
+                    <h3>Stats</h3>
+                    <p>weight: <span id="item_weight"></span> oz.</p>
+                    <p>price: <span id="item_price"></span></p>
+                    <p>description: <p id="item_description"></p></p>
+                </div>
+
+                <div class="arrow right" name='right'><span>></span></div>
+
+                <div class="equip_wrapper" data-step="3">
+                    <span>equip item</span>
+                    <input type="checkbox" id="equip_item_checkbox" value="#">
+                </div>
+            </div>
+        </div>
+
+        <div id="pack_data_wrapper">
+            <div id="chart_wrapper">
+                <canvas id='chart_canvas'></canvas>
+                <div id="pack_totals_wrapper">
+                    <p class='slabo' id='total_title'>Pack Stats</p>
+                    <p class='slabo' id='total_price'></p>
+                    <p class='slabo' id='total_weight'></p>
+                </div>
+            </div>
+            <div id="equipped_items_wrapper">
+                <h2>Equipped Items</h2> -->
+
+                 <!-- add purchase button, must set href later as we haven't received the cart info by this point -->
+                <a href='#' target='_blank' id='purchase_link'>
+                    <%= image_tag('amazon_purchase_button.gif', id: 'purchase_cart_img',  alt: 'purchase cart') %>
+                </a>
+            </div>
+        </div>
+    </div><!-- container -->
+
+
+</body>

@@ -1,0 +1,108 @@
+<head>
+    <title>About Us</title>
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- home page link and brand name -->
+        <a class="navbar-brand" href="/">PACKBUILDER</a>
+
+        <!-- toggler for 'collapsed mode' -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- all links inside this div are added to the toggle list in collapsed mode -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- page links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="/loadout">Loadout</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/about">About</a></li>
+            </ul>
+
+
+            <!-- social links -->
+            <ul class="nav navbar-nav navbar-right social_links">
+                <li><a href="www.facebook.com"><i class="fa fa-facebook-official"></i></a></li>
+                <li><a href="www.instagram.com"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="www.youtube.com"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- page header, this will be the packbuilder logo eventually! and page title probably -->
+    <div class="jumbotron no_margin_bottom">
+        <h2 class="display">About us</h2>
+    </div>
+
+
+    <!-- top background image -->
+    <div class="container-fluid big_background">
+        <div class="row">
+            <div class="col-md-12 parallax top_background hide_for_mobile" style="background-image: url('https://farm8.staticflickr.com/7627/26891087994_1eefba39c8_h.jpg')">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid padding">
+
+        <!-- mission text header -->
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="about_text_header">Who we are</h2>
+            </div>
+        </div>
+
+        <!-- mission text -->
+        <div class="row">
+            <div class="col-md-2 col-sm-1"></div><!-- spacer div -->
+            <div class="col-md-8 col-sm-10">
+                <p class="about_us_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            </div>
+            <div class="col-md-2 col-sm-1"></div><!-- spacer div -->
+        </div>
+
+        <!-- the team -->
+        <div class="row">
+
+            <!-- suki -->
+            <div class="col-md-6 col-sm-12 puke_bg">
+                <img class="col-md-4 col-sm-3 thumbnail staff_img" src="<%= asset_path 'glowing_suki.jpg' %>" alt="my face!">
+                <div class="col-md-8 col-sm-9 staff_stats_wrapper">
+                    <p class="name">Suki Yaeko</p>
+                    <em class="italics text-muted">Hunter | Sniffer | Biter</em>
+                    <p class="staff_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+
+            <!-- me -->
+            <div class="col-md-6 col-sm-12 puke_bg">
+                <img class="col-md-4 col-sm-3 thumbnail staff_img" src="<%= asset_path 'me.jpg' %>" alt="my face!">
+                <div class="col-md-8 col-sm-9 staff_stats_wrapper">
+                    <p class="name">Jordan Weatherford</p>
+                    <em class="italics text-muted">Hiker | Hippy</em>
+                    <p class="staff_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- bottom background image -->
+    <div class="container-fluid big_background">
+        <div class="row">
+            <div class="col-md-12 parallax bottom_background hide_for_mobile" style="background-image: url('https://i.imgur.com/higQC1V.jpg');">
+            </div>
+        </div>
+    </div>
+
+
+</body>

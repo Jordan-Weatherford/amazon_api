@@ -1,0 +1,122 @@
+<head>
+    <title>Blog - <%= @blog['title'] %></title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <!-- page specific javascript -->
+    <script type="text/javascript" src="/javascripts/blog_script.js"></script>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- home page link and brand name -->
+        <a class="navbar-brand" href="/">PACKBUILDER</a>
+
+        <!-- toggler for 'collapsed mode' -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- all links inside this div are added to the toggle list in collapsed mode -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- page links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="/reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="/loadout">Loadout</a></li>
+                <li class="nav-item active"><a class="nav-link" href="/blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            </ul>
+
+
+            <!-- social links -->
+            <ul class="nav navbar-nav navbar-right social_links">
+                <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-envelop"></i></a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+
+    <!-- top background image container -->
+    <div class="container-fluid no_pad">
+
+        <!-- top background image and post tile -->
+        <% if @blog['main_image'] %>
+
+            <!-- top background image -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 parallax top_background" style="background-image: url('<%= @blog['main_image'] %>')">
+                        <div class="image_background_contents_wrapper">
+                            <h1 class="image_background_big_text"><%= @blog['title'] %></h1>
+                            <h3 class="image_background_small_text">~ <%= @blog['date'] %> ~</h3>
+                        </div>
+                        <em class="image_background_subtitle"><%= @blog['images'][0]['subtitle'] %></em>
+                    </div>
+                </div>
+            </div>
+
+        <% end %>
+
+    </div>
+
+
+    <!-- loop through all posts and images and add to layout -->
+    <% if @blog['posts'] %>
+        <div class="container">
+
+                <% i = 0 %>
+                <% while i < @blog['posts'].length || i < @blog['images'].length %>
+
+                    <!-- add post, if it exists -->
+                    <% if @blog['posts'][i] %>
+                    <div class="row">
+                        <div class="col-md-1"></div><!-- spacer div -->
+                        <div class="col-md-10 text-justify margin_top margin_bottom">
+                            <p><%= @blog['posts'][i] %></p>
+                        </div>
+                        <div class="col-md-1"></div><!-- spacer div -->
+                    </div>
+                    <% end %>
+
+
+                    <!-- add image, if it exists -->
+                    <% if @blog['images'][i] %>
+                    <div class="row">
+                        <div class="col-md-1"></div><!-- spacer div -->
+                        <div class="col-md-10 text-justify margin_top margin_bottom">
+                            <img class="clickable_image" name="<%= i %>" src="<%= @blog['images'][i]['url'] %>" alt="amazing photo" width="100%">
+                            <div class="subtitle_wrapper">
+                                <em class="grey"><%= @blog['images'][i]['subtitle'] %></em>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div><!-- spacer div -->
+                    </div>
+                    <% end %>
+
+                <!-- iterate and continue looping -->
+                <% i += 1 %>
+                <% end %>
+
+            </div>
+
+        <!-- error fetching blogs -->
+        <% else %>
+            <div class="jumbotron">
+                <h1>Oops it looks like there's been a slite hiccup while loading. Help yourself to a refreshment.</h1>
+            </div>
+        <% end %>
+
+
+
+
+
+    </div><!-- site container -->
+</body>

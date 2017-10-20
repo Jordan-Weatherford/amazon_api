@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nickname: MyString
+  weight: 1.5
+  price: 1.5
+  description: MyText
+  asin: MyString
+  url: MyString
+
+two:
+  nickname: MyString
+  weight: 1.5
+  price: 1.5
+  description: MyText
+  asin: MyString
+  url: MyString
