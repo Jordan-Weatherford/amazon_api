@@ -4,7 +4,6 @@ class CustomCaller
     require 'openssl'
     require 'base64'
     require 'open-uri'
-    # require 'rest-client'
 
     # initialize for use with aws associate api
     def initialize
@@ -42,6 +41,7 @@ class CustomCaller
 
         signed_url = self.create_url(params)
 
+
         response_from_aws = Nokogiri::HTML(open(signed_url))
 
         thumbs = response_from_aws.xpath("//items/item/smallimage/url")
@@ -54,7 +54,7 @@ class CustomCaller
             'reviews' => Array.new,
         }
 
-        for i in 0..thumbs.length
+        for i in 0...thumbs.length
             response_to_controller['thumbs'].push(thumbs[i].text)
             response_to_controller['prices'].push(prices[i].text)
             response_to_controller['reviews'].push(reviews[i].text)

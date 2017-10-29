@@ -2,8 +2,8 @@ class AlexaController < ApplicationController
     require 'custom_caller'
 
     credentials = {
-        'secret_key' => '~~~~~~~~~~~~~~~~~~',
-        'key_id' => '',
+        'secret_key' => 'y7DmAv+5rJ+9IdZlkiUb/vzk731oAuAf6HxtoQlh',
+        'key_id' => 'AKIAIY7NGC2K7ONJPBKA',
         'associate_tag' => 'ultralightpac-20'
     }
     @@request = CustomCaller.new
