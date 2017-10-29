@@ -39,8 +39,7 @@ gem 'nokogiri'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'imagesLoaded_rails', '~> 4.1.0'
-gem 'rack-cors'
-
+gem 'rack-cors', :require => 'rack/cors'
 
 
 # Use Capistrano for deployment
